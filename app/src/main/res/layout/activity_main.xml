@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textChoice"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="#2B2828"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:onClick="btnStartGame"
+        android:text="Начать"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Начать" />
+
+    <ImageButton
+        android:id="@+id/btnLizard"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:onClick="GetUserChoiceLizard"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/textChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lizard" />
+
+    <ImageButton
+        android:id="@+id/btnSpock"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:onClick="GetUserChoiceSpock"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btnLizard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRock"
+        app:layout_constraintVertical_bias="0.121"
+        app:srcCompat="@drawable/spock" />
+
+    <ImageButton
+        android:id="@+id/btnPaper"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        android:onClick="GetUserChoicePaper"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btnLizard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnScissors"
+        app:layout_constraintVertical_bias="0.121"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageButton
+        android:id="@+id/btnRock"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:onClick="GetUserChoiceRock"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageButton
+        android:id="@+id/btnScissors"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="GetUserChoiceScissors"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult"
+        app:srcCompat="@drawable/scissors" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="261dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
